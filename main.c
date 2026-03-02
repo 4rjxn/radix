@@ -30,6 +30,10 @@ int toDec(int base, char *val) {
   for (int i = 0; l >= 0; i++) {
     if (val[l] >= 48 && val[l] <= 57) {
       dec += (val[l] - 48) * fpow(base, i);
+      printf("%d %c\n", val[l], val[l]);
+    }
+    if (val[l] >= 65 && val[l] <= 90) {
+      dec += (val[l] - 55) * fpow(base, i);
     }
     if (val[l] >= 97 && val[l] <= 122) {
       dec += (val[l] - 87) * fpow(base, i);
